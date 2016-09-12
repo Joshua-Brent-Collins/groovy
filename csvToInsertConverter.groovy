@@ -60,8 +60,8 @@ public class CsvToInsertConverter {
     def convertToInserts(String path, String dest) {
         def insertFile = new File(dest)
         readFile(path)
-        replaceNulls()
         applyTypeWrappers()
+        replaceNulls()
         println "Generating Inserts."
         csvFileData.each { line ->
             insertFile.append("INSERT INTO ${TABLE_NAME} (${FIELD_NAMES.join(',')}) values (${line.join(',')});\n")
