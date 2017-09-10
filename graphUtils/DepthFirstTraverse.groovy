@@ -15,7 +15,6 @@ public class DepthFirstTraverse {
             def frontNode = nodesToVisit.pop()
             if (! nodesVisited[frontNode]) {
                 traversedOrder.push(frontNode)
-                //This toString is more of a reference saftey when mapping an object.
                 nodesVisited[frontNode] = true
                 //Order is important here we need the adjacent nodes loaded first for back tracking.
                 addAdjNodes(nodeList[frontNode])
