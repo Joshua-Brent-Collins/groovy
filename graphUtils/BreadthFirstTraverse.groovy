@@ -15,7 +15,6 @@ public class BreadthFirstTraverse {
             def frontNode = nodesToVisit.first()
             if (! nodesVisited[frontNode]) {
                 traversedOrder.push(frontNode)
-                //This toString is more of a reference saftey when mapping an object.
                 nodesVisited[frontNode] = true
                 addAdjNodes(nodeList[frontNode])
             }
